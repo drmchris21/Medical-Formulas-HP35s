@@ -1,0 +1,77 @@
+CRCL (Creatinine Clearance)
+A: Age
+W: Weight Kg
+S: Sex (1=Male, 2=Female)
+C: Serum Creatinine mg/dL
+(140-A)*W*(S*-0,15+1,15)/72/C
+
+MDRD (GFR)
+A: Age
+C: Serum Creatine mg/dL
+S: Sex (1=Male, 2=Female)
+R: Race (1=White, 2=Black)
+186*A^-0,203*C^-1,154*(S*-0,258+1,258)*(R*0,212+ 0,788)
+
+CKD-EPI (GFR)
+A: Age
+W: Weight Kg
+S: Sex (1=Male, 2=Female)
+C: Serum Creatinine mg/dL
+(140-A)*W*(S*-0,15+1,15)/72/C
+
+MDRD (GFR)
+A: Age
+C: Serum Creatine mg/dL
+S: Sex (1=Male, 2=Female)
+R: Race (1=White, 2=Black)
+186*A^-0,203*C^-1,154*(S*-0,258+1,258)*(R*0,212+ 0,788)
+
+CKD-EPI (GFR)
+A: Age
+C: Serum Creatine mg/dL
+S: Sex (1=Male, 2=Female)
+R: Race (1=White, 2=Black)
+141*0,993^Age*((1+SCr/(Sex*-0,2+1,1)-abs(1-SCr/(Sex*-0,2+1,1)))/2)^(Sex*0,082-0,493)*((1+SCr/(Sex*-0,2+1,1)+abs(1-SCr/(Sex*-0,2+1,1)))/2)^-1,209*(Sex*0,018+0,982)*(Race*0,159+0,841)
+
+BSA (Body Surface Area)
+W: Weight Kg
+H: Height m
+0,007184*W^0,425*(H*100)^0,725
+
+CA (Correcter Calcium)
+N: Normal Albumine g/dL
+A: Serum Albumine g/dL
+C: Serum Calcium mg/dL
+0,8*(N-A)+C
+
+NA (Corrected Sodium)
+N: Serum Sodium mEq/L
+G: Serum Glucose mg/dL
+N+(G-100)*0,016
+
+WD (Water Defficit)
+W: Weight Kg
+N: Serum Sodium mEq/L
+0,6*W*(N/140-1)
+
+MAP (Mean Arterial Pressure)
+S: Systolic blood pressure
+D: Diastolic blood pressure 
+(2*D+S)/3
+
+TOTAL O2
+H: Hgb %
+S: SO2 %
+P: PO2 mmHg
+H*1,34*S/100+P*0,003
+
+NASALFIO2
+L:L/min
+20,9+4*L
+
+MELD
+B: Bilirubin mg/dL
+I: INR
+C: Creatinine mg/dL
+Every value less than on must entered as 1.
+IP((3,78*ln(B)+11,2*ln(I)+9,57*ln(C)+6,43)+0,5)
